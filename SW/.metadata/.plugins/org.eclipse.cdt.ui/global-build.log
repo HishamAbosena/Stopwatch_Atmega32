@@ -1,0 +1,330 @@
+22:28:27 **** Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:29: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     302 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:35 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:30: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     300 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:56 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:30: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     300 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:31:10 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:30: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     296 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:31:49 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:30: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     302 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:32:07 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:30: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     306 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:34:25 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:30: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     306 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:35:06 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'timer1_init':
+../src/main.c:30: warning: large integer implicitly truncated to unsigned type
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     300 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          3 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:32:45 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:77:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5376 bytes (16.4% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:33:46 **** Incremental Build of configuration Debug for project Stopwatch ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: Stopwatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Stopwatch.map -mmcu=atmega32 -o "Stopwatch.elf"  ./src/main.o   
+Finished building target: Stopwatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Stopwatch.elf  >"Stopwatch.lss"
+Finished building: Stopwatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Stopwatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5376 bytes (16.4% Full)
+(.text + .data + .bootloader)
+
+Data:         11 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

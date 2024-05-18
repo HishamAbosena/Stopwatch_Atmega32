@@ -1,0 +1,171 @@
+//#include <avr/io.h>
+//#include <avr/interrupt.h>
+//
+///*defining global timer:*/
+//uint8_t secs=0;
+//uint8_t mins=0;
+//uint8_t hrs=0;
+//
+///* Interrupt Service Routine for timer0 compare mode */
+//ISR(TIMER1_COMPA_vect)
+//{
+//	/*secs++;
+//	if(secs == 60){
+//		secs=0;
+//		mins++;
+//	}
+//	if(mins==60){
+//		mins=0;
+//		hrs++;
+//	}*/
+//	PORTC^=(1<<PC0);
+//
+//}
+//void timer1_init() {
+//    /* Set CTC mode with OCR1A as TOP*/
+//    TCCR1B |= (1 << WGM12);
+//     /*Set timer prescaler to 1*/
+//    TCCR1B |= (1 << CS10);
+//     /*Load OCR1A with the desired value for 1-second interrupt*/
+//    OCR1A = 999999;
+//     /*Enable Timer1 compare match A interrupt*/
+//    TIMSK |= (1 << OCIE1A);
+//    /*Enable global interrupts*/
+//    sei(); /* equivalent to setting the 7th bit in the sreg to 1*/
+//}
+////void Timer1_CTC_Square_Wave_Init(void)
+////{
+////
+////	TCNT1 = 0;		/* Set timer1 initial count to zero */
+////
+////	OCR1A = 60;    /* Set the Compare value to 60 */
+////
+////	TIMSK |= (1<<OCIE1A); /* Enable Timer1 Compare A Interrupt */
+////
+////	/* Configure timer control register TCCR1A
+////	 * 1. Disconnect OC1A and OC1B  COM1A1=0 COM1A0=0 COM1B0=0 COM1B1=0
+////	 * 2. FOC1A=1 FOC1B=0
+////	 * 3. CTC Mode WGM10=0 WGM11=0 (Mode Number 4)
+////	 */
+////	TCCR1A = (1<<FOC1A);
+////
+////	/* Configure timer control register TCCR1B
+////	 * 1. CTC Mode WGM12=1 WGM13=0 (Mode Number 4)
+////	 * 2. Prescaler = F_CPU/8 CS10=0 CS11=1 CS12=0
+////	 */
+////	TCCR1B = (1<<WGM12) | (1<<CS11);
+////}
+//
+//int main(void){
+//	DDRC=0x01;
+//	PORTC=0x01;
+//	timer1_init();
+//	while (1){
+//
+//
+//	}
+//	return 0;
+//}
+/*
+ * project2.c
+ *
+ *  Created on: 14 May 2024
+ *      Author: egypt
+ */
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+unsigned char tick=0,sec=0,min=0,hour=0;
+
+ISR (TIMER1_COMPA_vect){
+	sec++;
+	if(sec==60){
+		sec=0;
+		min++;
+	}
+	if(min==60){
+		min=0;
+		hour++;
+	}
+}
+
+ISR (INT1_vect){
+	TIMSK&=~(1<<OCIE1A);
+}
+
+ISR (INT2_vect){
+	TIMSK|=(1<<OCIE1A);
+}
+
+ISR(INT0_vect){
+sec=0;
+min=0;
+hour=0;
+}
+void INT0_ENABLE(void){
+	GICR|=(1<<INT0);
+	MCUCR|=(1<<ISC01);
+	MCUCR&=~(1<<ISC00);
+}void INT1_ENABLE(void){
+	GICR|=(1<<INT1);
+		MCUCR|=(1<<ISC11);
+		MCUCR|=(1<<ISC10);
+}void INT2_ENABLE(void){
+	GICR|=(1<<INT2);
+	MCUCR&=~(1<<ISC2);
+
+}
+
+
+void enable_timer1 (void){
+	TCCR1A=(1<<FOC1A);	//NON PWM MODE
+	TIMSK|=(1<<OCIE1A); 	//ENABLE COMPARE INTERRUPT
+	TCNT1 = 0; //SET COUNTER VALUE To 0
+
+	OCR1A=15625; //COMPARE VALUE MEANS 1 SEC EVERY INTERRUPT
+	TCCR1B=(1<<WGM12)|(1<<CS11)|(1<<CS10);
+	//WGM1 SET TO 1 TO OPERATE COMPARE MODE
+	//CS10,11 SET PRESCALER TO 64
+
+}
+int main(){
+	//T3REEF EL LEDS ENABLE COMMAN ANODE W EL DECODER
+	DDRC|=0x0F;
+	DDRA|=0x3F;
+	PORTC &=~ 0xF0;
+	PORTA |= 0B0;
+	SREG=(1<<7);
+	//T3REEF EL PUSHH BUTTONS
+	DDRD &=~ (1<<PD3)&~(1<<PD2);
+	DDRB &=~ (1<<PB2);
+	PORTD|=(1<<PD2);
+	PORTB|=(1<<PB2);
+	INT0_ENABLE();
+	INT1_ENABLE();
+	INT2_ENABLE();
+	enable_timer1();
+	while(1){
+		//y7ot el unit f el unit w el tenth f l tenth
+		//34an kda 3mlna el / w el %
+		// el delay 34an 3eny tl72 t4of el rqm w fnfs el w2t mt2t34 b delay kbeer
+		PORTA=0B00000001;
+		PORTC=hour/10;
+		_delay_ms(1);
+		PORTA=0B00000010;
+		PORTC=hour%10;
+		_delay_ms(1);
+		PORTA=0B00000100;
+		PORTC=min/10;
+		_delay_ms(1);
+		PORTA=0B00001000;
+		PORTC=min%10;
+		_delay_ms(1);
+		PORTA=0B00010000;
+		PORTC=sec/10;
+		_delay_ms(1);
+		PORTA=0B00100000;
+		PORTC=sec%10;
+		_delay_ms(1);
+	}
+
+}
